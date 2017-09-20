@@ -1,0 +1,25 @@
+{
+  "name": "react-native-umeng-analytics",
+  "version": "1.0.0",
+  "description": "umeng analytics for react native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daivdggdev/react-native-umeng-analytics.git"
+  },
+  "keywords": [
+    "umeng",
+    "analytics",
+    "react",
+    "native"
+  ],
+  "author": "dwwang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daivdggdev/react-native-umeng-analytics/issues"
+  },
+  "homepage": "https://github.com/daivdggdev/react-native-umeng-analytics#readme"
+}
