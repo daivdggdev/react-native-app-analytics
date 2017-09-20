@@ -18,7 +18,7 @@ RCT_EXPORT_MODULE();
     static dispatch_queue_t methodQueue;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        methodQueue = dispatch_queue_create("react-native-umeng-analytics", DISPATCH_QUEUE_SERIAL);
+        methodQueue = dispatch_queue_create("react-native-app-analytics", DISPATCH_QUEUE_SERIAL);
     });
     return methodQueue;
 }
@@ -28,18 +28,13 @@ RCT_EXPORT_MODULE();
     return [RNUMAnalytics sharedMethodQueue];
 }
 
-RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
-{
-    //RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
-}
-
 RCT_EXPORT_METHOD(startWithConfigure:(NSString*)appKey channelId:(NSString*)channelId)
 {
-//    UMConfigInstance.appKey = appKey;
-//    UMConfigInstance.channelId = channelId;
-//    
-//    [MobClick setAppVersion:XcodeAppVersion];
-//    [MobClick startWithConfigure:UMConfigInstance];
+    UMConfigInstance.appKey = appKey;
+    UMConfigInstance.channelId = channelId;
+    
+    [MobClick setAppVersion:XcodeAppVersion];
+    [MobClick startWithConfigure:UMConfigInstance];
 }
 
 - (NSDictionary *)constantsToExport

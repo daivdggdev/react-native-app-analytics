@@ -1,28 +1,8 @@
 'use strict';
 
-var RNSns = require('react-native').NativeModules.RNSns;
+var RNUMAnalytics = require('react-native').NativeModules.RNUMAnalytics;
 module.exports = {
-  isWXSupport: RNSns.isWXSupport,
-  isQQSupport: RNSns.isQQSupport,
-  isSinaSupport: RNSns.isSinaSupport,
-
-  setUmSocialAppkey: function(appKey) {
-    return RNSns.setUmSocialAppkey(appKey);
+  startWithConfigure: function(appKey, channelId) {
+    return RNUMAnalytics.startWithConfigure(appKey, channelId);
   },
-
-  openLog: function(isOpen) {
-    return RNSns.openLog(isOpen);
-  },
-
-  setPlaform: function(type, appKey, appSecret, redirectUrl) {
-    return RNSns.setPlaform.apply(null, arguments);
-  },
-
-  getPlatformInfo: function(type) {
-    return RNSns.getPlatformInfo(type);
-  },
-
-  showShareMenuView: function(url, title, description) {
-    return RNSns.showShareMenuView(url, title, description);
-  }
 };
