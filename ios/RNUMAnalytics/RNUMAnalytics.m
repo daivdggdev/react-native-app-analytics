@@ -7,6 +7,7 @@
 //
 
 #import "RNUMAnalytics.h"
+#import <UMMobClick/MobClick.h>
 
 @implementation RNUMAnalytics
 
@@ -29,22 +30,21 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
 {
-    RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
+    //RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
 }
 
-RCT_EXPORT_METHOD(setUmSocialAppkey:(NSString*)appKey)
+RCT_EXPORT_METHOD(startWithConfigure:(NSString*)appKey channelId:(NSString*)channelId)
 {
-    [[UMSocialManager defaultManager] setUmSocialAppkey:appKey];
+//    UMConfigInstance.appKey = appKey;
+//    UMConfigInstance.channelId = channelId;
+//    
+//    [MobClick setAppVersion:XcodeAppVersion];
+//    [MobClick startWithConfigure:UMConfigInstance];
 }
 
 - (NSDictionary *)constantsToExport
 {
-    UMSocialManager *manager = [UMSocialManager defaultManager];
-    return @{
-             @"isWXSupport": [NSNumber numberWithBool:[manager isSupport:UMSocialPlatformType_WechatSession]],
-             @"isQQSupport": [NSNumber numberWithBool:[manager isSupport:UMSocialPlatformType_QQ]],
-             @"isSinaSupport": [NSNumber numberWithBool:[manager isSupport:UMSocialPlatformType_Sina]],
-             };
+    return @{};
 }
 
 @end

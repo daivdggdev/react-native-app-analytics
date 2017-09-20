@@ -37,7 +37,7 @@ public class RNUMAnalyticsModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "RNSns";
+        return "RNUMAnalytics";
     }
 
     @ReactMethod
