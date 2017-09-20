@@ -1,5 +1,5 @@
 {
-  "name": "react-native-umeng-analytics",
+  "name": "@dwwang/react-native-umeng-analytics",
   "version": "1.0.0",
   "description": "umeng analytics for react native",
   "main": "index.js",
