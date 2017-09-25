@@ -37,6 +37,11 @@ RCT_EXPORT_METHOD(startWithConfigure:(NSString*)appKey channelId:(NSString*)chan
     [MobClick startWithConfigure:UMConfigInstance];
 }
 
+RCT_EXPORT_METHOD(onEvent:(NSString*)eventId)
+{
+    [MobClick event:eventId];
+}
+
 - (NSDictionary *)constantsToExport
 {
     return @{};

@@ -5,4 +5,8 @@ module.exports = {
   startWithConfigure: function(appKey, channelId) {
     return RNUMAnalytics.startWithConfigure(appKey, channelId);
   },
+
+  onEvent: function(eventId) {
+    return RNUMAnalytics.onEvent(eventId);
+  }
 };
