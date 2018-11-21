@@ -42,9 +42,4 @@ RCT_EXPORT_METHOD(onEvent:(NSString*)eventId)
     [MobClick event:eventId];
 }
 
-- (NSDictionary *)constantsToExport
-{
-    return @{};
-}
-
 @end
