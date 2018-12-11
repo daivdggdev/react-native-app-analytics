@@ -5,7 +5,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.umeng.analytics.MobclickAgent;
-import com.umeng.analytics.MobclickAgent.UMAnalyticsConfig;
+import com.umeng.commonsdk.UMConfigure;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -46,8 +46,7 @@ public class RNUMAnalyticsModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void startWithConfigure(String appKey, String channelId) {
-        UMAnalyticsConfig config = new UMAnalyticsConfig(mContext, appKey, channelId);
-        MobclickAgent.startWithConfigure(config);
+        UMConfigure.init(this, appKey, channelId, UMConfigure.DEVICE_TYPE_PHONE, null);
     }
 
     @ReactMethod

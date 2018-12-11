@@ -30,6 +30,7 @@ android {
 }
 
 dependencies {
-  compile 'com.umeng.analytics:analytics:latest.integration'
+  compile 'com.umeng.sdk:common:latest.integration'
+  compile 'com.umeng.sdk:analytics:latest.integration'
   compile 'com.facebook.react:react-native:+'
 }

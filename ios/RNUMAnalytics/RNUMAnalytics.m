@@ -7,7 +7,8 @@
 //
 
 #import "RNUMAnalytics.h"
-#import <UMMobClick/MobClick.h>
+#import <UMCommon/UMCommon.h>
+#import <UMAnalytics/MobClick.h>
 
 @implementation RNUMAnalytics
 
@@ -30,11 +31,7 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(startWithConfigure:(NSString*)appKey channelId:(NSString*)channelId)
 {
-    UMConfigInstance.appKey = appKey;
-    UMConfigInstance.channelId = channelId;
-    
-    [MobClick setAppVersion:XcodeAppVersion];
-    [MobClick startWithConfigure:UMConfigInstance];
+    [UMConfigure initWithAppkey:appKey channel:channelId];
 }
 
 RCT_EXPORT_METHOD(onEvent:(NSString*)eventId)
