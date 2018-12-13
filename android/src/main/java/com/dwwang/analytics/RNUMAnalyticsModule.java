@@ -46,7 +46,7 @@ public class RNUMAnalyticsModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void startWithConfigure(String appKey, String channelId) {
-        UMConfigure.init(this, appKey, channelId, UMConfigure.DEVICE_TYPE_PHONE, null);
+        UMConfigure.init(mContext, appKey, channelId, UMConfigure.DEVICE_TYPE_PHONE, null);
     }
 
     @ReactMethod
