@@ -4,7 +4,10 @@
   "description": "umeng analytics for react native",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run np",
+    "np": "np --no-cleanup --yolo --no-publish",
+    "pub": "npm publish --registry https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/daivdggdev/react-native-umeng-analytics/issues"
   },
-  "homepage": "https://github.com/daivdggdev/react-native-umeng-analytics#readme"
+  "homepage": "https://github.com/daivdggdev/react-native-umeng-analytics#readme",
+  "devDependencies": {
+    "np": "^6.2.3"
+  }
 }
