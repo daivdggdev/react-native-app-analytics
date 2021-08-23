@@ -4,6 +4,7 @@ import com.facebook.react.bridge.LifecycleEventListener;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.umeng.analytics.AnalyticsConfig;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.commonsdk.UMConfigure;
 
@@ -42,6 +43,21 @@ public class RNUMAnalyticsModule extends ReactContextBaseJavaModule {
     @Override
     public String getName() {
         return "RNUMAnalytics";
+    }
+
+    @ReactMethod
+    public String getChannel() {
+        return AnalyticsConfig.getChannel(mContext);
+    }
+
+    @ReactMethod
+    public void setLogEnabled(Boolean enabled) {
+        UMConfigure.setLogEnabled(enabled);
+    }
+
+    @ReactMethod
+    public void preInit(String appKey, String channelId) {
+        UMConfigure.preInit(mContext, appKey, channelId);
     }
 
     @ReactMethod
