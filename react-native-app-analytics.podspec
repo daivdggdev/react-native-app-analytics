@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
   s.source_files = "ios/RNUMAnalytics/*.{h,m}"
 
   s.dependency 'React'
-  s.dependency 'UMCCommon'
-  s.dependency 'UMCAnalytics'
+  s.dependency 'UMCommon'
+  s.dependency 'UMDevice'
 end
