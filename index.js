@@ -11,7 +11,7 @@ module.exports = {
   },
 
   preInit: function(appKey, channelId) {
-    return RNUMAnalytics.startWithConfigure(appKey, channelId);
+    return RNUMAnalytics.preInit(appKey, channelId);
   },
 
   startWithConfigure: function(appKey, channelId) {
