@@ -1,5 +1,7 @@
 'use strict';
 
+import { Platform } from 'react-native';
+
 var RNUMAnalytics = require('react-native').NativeModules.RNUMAnalytics;
 module.exports = {
   getChannel: function() {
@@ -11,6 +13,9 @@ module.exports = {
   },
 
   preInit: function(appKey, channelId) {
+    if (Platform.OS === 'ios') {
+      return;
+    }
     return RNUMAnalytics.preInit(appKey, channelId);
   },
 
