@@ -1,6 +1,6 @@
 {
   "name": "react-native-app-analytics",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "umeng analytics for react native",
   "main": "index.js",
   "scripts": {
