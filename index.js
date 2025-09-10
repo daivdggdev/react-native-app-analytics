@@ -23,6 +23,10 @@ module.exports = {
     return RNUMAnalytics.startWithConfigure(appKey, channelId);
   },
 
+  startCrashReport: function(appId) {
+    return RNUMAnalytics.startCrashReport(appId);
+  },
+
   onEvent: function(eventId) {
     return RNUMAnalytics.onEvent(eventId);
   }

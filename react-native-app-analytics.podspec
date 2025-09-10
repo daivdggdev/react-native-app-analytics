@@ -16,4 +16,5 @@ Pod::Spec.new do |s|
   s.dependency 'React-Core'
   s.dependency 'UMCommon'
   s.dependency 'UMDevice'
+  s.dependency 'Bugly'
 end

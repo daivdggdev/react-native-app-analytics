@@ -8,9 +8,10 @@ import com.umeng.analytics.AnalyticsConfig;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.commonsdk.UMConfigure;
 
+import com.tencent.bugly.crashreport.CrashReport;
+
 import java.util.HashMap;
 import java.util.Map;
-
 
 public class RNUMAnalyticsModule extends ReactContextBaseJavaModule {
     private static final String TAG = "RNUMAnalyticsModule";
@@ -63,6 +64,11 @@ public class RNUMAnalyticsModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void startWithConfigure(String appKey, String channelId) {
         UMConfigure.init(mContext, appKey, channelId, UMConfigure.DEVICE_TYPE_PHONE, null);
+    }
+
+    @ReactMethod
+    public void startCrashReport(String appId) {
+        CrashReport.initCrashReport(getReactApplicationContext(), appId, BuildConfig.DEBUG);
     }
 
     @ReactMethod

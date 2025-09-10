@@ -10,6 +10,8 @@
 #import <UMCommon/UMCommon.h>
 #import <UMCommon/MobClick.h>
 
+#import <Bugly/Bugly.h>
+
 @implementation RNUMAnalytics
 
 RCT_EXPORT_MODULE();
@@ -32,6 +34,11 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(startWithConfigure:(NSString*)appKey channelId:(NSString*)channelId)
 {
     [UMConfigure initWithAppkey:appKey channel:channelId];
+}
+
+RCT_EXPORT_METHOD(startCrashReport:(NSString*)appId)
+{
+    [Bugly startWithAppId:appId];
 }
 
 RCT_EXPORT_METHOD(onEvent:(NSString*)eventId)

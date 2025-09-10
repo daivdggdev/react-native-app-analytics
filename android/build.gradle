@@ -33,5 +33,6 @@ android {
 dependencies {
   implementation 'com.umeng.umsdk:common:9.4.4'
   implementation 'com.umeng.umsdk:asms:1.4.1'
+  implementation 'com.tencent.bugly:crashreport:4.1.9'
   implementation 'com.facebook.react:react-native:+'
 }
